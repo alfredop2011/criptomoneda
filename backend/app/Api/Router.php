@@ -63,6 +63,7 @@ class Router
         $route = $routes[$request["method"]][$request["uri"]];
         $controller = $controllers[$route["controller"]].'\\'.$route["controller"];
         $action = new $controller($db);
+
         $action->{$route["method"]}($params);
     }
 }
