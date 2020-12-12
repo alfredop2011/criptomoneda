@@ -1,0 +1,30 @@
+{
+    "name": "idavinci/ccanalyzer",
+    "description": "Analisis de criptomonedas",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "idavinci",
+            "email": "desarrollo@idavinci.es"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "App\\" : "app/"
+        }
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.2@dev"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@test"
+        ],
+        "test": [
+            "touch foo"
+        ]
+    }
+    
+}

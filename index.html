@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CC Analyzer</title>
+        <link rel="stylesheet" href="frontend/node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="frontend/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="frontend/css/styles.css">
+        
+        
+        <!-- Bootstrap CSS -->
+        
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md bg-light">
+            <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">
+                <img src="frontend/img/logo.png" class="img-responsive" alt="Image">
+            </a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav mr-auto">
+                    
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link">Servicio N1</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="nav-link" href="#">Service B1</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Service B2</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="nav-link" href="#">Service C1</a></li>
+                                    <li><a class="nav-link" href="#">Service C2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+
+        <main id="page-content" class="container">
+            <header>
+                <h1 class="page-header">Criptomonedas</h1>
+            </header>
+            <section>
+               <!-- Nav tabs -->
+               <ul class="nav nav-tabs">
+                   <li class="nav-item">
+                       <a id="currencies-tab-button" class="nav-link active" data-toggle="tab" href="#tab1">Monedas</a>
+                   </li>
+                   <li class="nav-item">
+                       <a id="tracing-tab-button" class="nav-link" data-toggle="tab" href="#tab2">Siguiendo</a>
+                   </li>
+                   <li class="nav-item">
+                       <a id="options-tab-button" class="nav-link" data-toggle="tab" href="#tab3">Opciones</a>
+                   </li>
+               </ul>
+
+               <!-- Tab panes -->
+               <div class="tab-content">
+                   <div class="tab-pane container active" id="tab1">
+                       <div class="tab-loader-wrapper d-none">
+                           <img src="frontend/img/loader.gif" alt="" class="img-responsive">
+                           <h4 class="text-center">Comprobando monedas... esto llevará unos minutos</h4>
+                       </div>
+                       <div class="progress d-none">
+                           <div id="coins-progress-checking" class="progress-bar" style="width:0%">0%</div>
+                       </div>
+                       <div class="tab-info">
+                       <table id="currencies-table" class="table">
+                           <thead>
+                               <th></th>
+                               <th>Moneda</th>
+                               <th>Precio</th>
+                               <th>Max.</th>
+                               <th>Min.</th>
+                               <th>Variación</th>
+                           </thead>
+                           <tbody></tbody>
+                       </table>
+                       </div>
+                   </div>
+                   <div class="tab-pane container fade" id="tab2">
+                       <div class="tab-loader-wrapper  d-none">
+                           <img src="frontend/img/loader.gif" alt="" class="img-responsive">
+                       </div>
+                       <div class="tab-info">
+                           <table id="favorites-table" class="table">
+                               <thead>
+                                   <th>#</th>
+                                   <th>Criptomoneda</th>
+                               </thead>
+                               <tbody></tbody>
+                           </table>
+                       </div>
+                   </div>
+                   <div class="tab-pane container fade" id="tab3">
+                       <div class="tab-info">
+                           <button class="btn btn-dark" id="check-coins">Comprobar monedas</button>
+                       </div>
+                   </div>
+               </div>
+            </section>
+        </main>
+        
+
+        <script src="frontend/dist/bundle.js"></script>
+    </body>
+</html>
