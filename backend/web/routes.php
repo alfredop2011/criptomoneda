@@ -2,27 +2,35 @@
 
 return [
     "POST" => [
-        "add_to_favorites" => [
+        "/CCAnalyzeriDavinci/backend/" => [
+            "controller" => "CoinController",
+            "method" => "index",
+        ],
+        "/add_to_favorites" => [
             "controller" => "CoinController",
             "method" => "store",
         ],
 
-        "add_new_currency" => [
+        "/add_new_currency" => [
             "controller" => "CoinController",
             "method" => "add_new",
         ],
     ],
 
     "GET" => [
-        "load_coins" => [
+        "/CCAnalyzeriDavinci/backend/" => [
             "controller" => "CoinController",
             "method" => "index",
         ],
-        "list_favorites" => [
+        "/load_coins" => [
+            "controller" => "CoinController",
+            "method" => "index",
+        ],
+        "/list_favorites" => [
             "controller" => "CoinController",
             "method" => "list",
         ],
-        "get_coin" => [
+        "/get_coin" => [
             "controller" => "CoinController",
             "method" => "show",
         ],

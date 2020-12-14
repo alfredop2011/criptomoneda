@@ -60,6 +60,7 @@ class Router
     public static function go($request, $params, $db){
         $routes = require_once 'web/routes.php';
         $controllers = require_once 'app/Core/controllers.php';
+        
         $route = $routes[$request["method"]][$request["uri"]];
         $controller = $controllers[$route["controller"]].'\\'.$route["controller"];
         $action = new $controller($db);
